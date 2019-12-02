@@ -1,0 +1,1417 @@
+1. Get all employee details from the employee table
+SELECT * FROM `employee2`
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+
+
+
+
+2. Get First_Name,Last_Name from employee table
+SELECT`FIRST_NAME`,`SECOND_NAME`FROM`employee2`
+
+
+
+
+
+
+
+
+
+
+ 	FIRST_NAME
+SECOND_NAME
+
+ 
+  Edit
+  Copy
+  Delete
+Venkadesh	S
+ 
+  Edit
+  Copy
+  Delete
+Ragavi	P
+ 
+  Edit
+  Copy
+  Delete
+Gopinath	C
+ 
+  Edit
+  Copy
+  Delete
+Dinesh	G
+ 
+  Edit
+  Copy
+  Delete
+Saibabu	E
+ 
+  Edit
+  Copy
+  Delete
+Hasana	S
+ 
+  Edit
+  Copy
+  Delete
+Divya	P
+ 
+  Edit
+  Copy
+  Delete
+Aravindan	R
+ 
+  Edit
+  Copy
+  Delete
+Sathish	MD
+ 
+  Edit
+  Copy
+  Delete
+Prasanth	PKP
+ 
+  Edit
+  Copy
+  Delete
+Vijay	R
+ 
+  Edit
+  Copy
+  Delete
+Sivakumar	K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.Get First_Name from employee table using alias name “Employee Name”
+
+ SELECT `FIRST_NAME` AS "EMPLOYEE NAME" FROM `employee2`
+ 	EMPLOYEE NAME
+
+ 	  Edit
+  Copy
+  Delete
+Venkadesh
+ 	  Edit
+  Copy
+  Delete
+Ragavi
+ 	  Edit
+  Copy
+  Delete
+Gopinath
+ 	  Edit
+  Copy
+  Delete
+Dinesh
+ 	  Edit
+  Copy
+  Delete
+Saibabu
+ 	  Edit
+  Copy
+  Delete
+Hasana
+ 	  Edit
+  Copy
+  Delete
+Divya
+ 	  Edit
+  Copy
+  Delete
+Aravindan
+ 	  Edit
+  Copy
+  Delete
+Sathish
+ 	  Edit
+  Copy
+  Delete
+Prasanth
+ 	  Edit
+  Copy
+  Delete
+Vijay
+ 	  Edit
+  Copy
+  Delete
+Sivakumar
+
+4.Get First_Name from employee table in upper case
+SELECT UPPER(`FIRST_NAME`)FROM `employee2`
+
+UPPER(`FIRST_NAME`)
+
+VENKADESH	
+RAGAVI	
+GOPINATH	
+DINESH	
+SAIBABU	
+HASANA	
+DIVYA	
+ARAVINDAN	
+SATHISH	
+PRASANTH	
+VIJAY	
+SIVAKUMAR	
+
+
+
+
+
+
+
+
+
+5.Get First_Name from employee table in lower case
+SELECT LOWER( `FIRST_NAME`) FROM `employee2`
+
+LOWER( `FIRST_NAME`)
+
+venkadesh	
+ragavi	
+gopinath	
+dinesh	
+saibabu	
+hasana	
+divya	
+aravindan	
+sathish	
+prasanth	
+vijay	
+sivakumar	
+
+
+6.Get unique DEPARTMENT from employee table
+
+SELECT DISTINCT (`DEPARTMENT`) FROM `employee2`
+
+ 	DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+BANKING
+ 	  Edit
+  Copy
+  Delete
+BUSINESS
+ 	  Edit
+  Copy
+  Delete
+PHARMA
+ 	  Edit
+  Copy
+  Delete
+INSURANCE
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE
+
+
+
+7.Select first 3 characters of FIRST_NAME from EMPLOYEE
+SELECT SUBSTRING(`FIRST_NAME`,1,3) FROM `employee2`
+
+SUBSTRING(`FIRST_NAME`,1,3)
+
+Ven	
+Rag	
+Gop	
+Din	
+Sai	
+Has	
+Div	
+Ara	
+Sat	
+Pra	
+Vij	
+Siv	
+
+
+
+
+
+
+
+
+8.Get position of 'a' in name 'ragavi' from employee table
+SELECT INSTR(`FIRST_NAME`,'a') FROM `employee2` WHERE `FIRST_NAME` ='Ragavi'
+
+INSTR(`FIRST_NAME`,'a')	
+2	
+
+
+
+
+
+
+
+
+
+
+
+9.Get FIRST_NAME from employee table after removing white spaces from right side
+SELECT RTRIM(`FIRST_NAME`) FROM `employee2`
+
+TRIM(`FIRST_NAME`)
+
+Venkadesh	
+Ragavi	
+Gopinath	
+Dinesh	
+Saibabu	
+Hasana	
+Divya	
+Aravindan	
+Sathish	
+Prasanth	
+Vijay	
+Sivakumar	
+10.Get FIRST_NAME from employee table after removing white spaces from left side
+SELECT LTRIM(`FIRST_NAME`) FROM `employee2`
+
+TRIM(`FIRST_NAME`)
+
+Venkadesh	
+Ragavi	
+Gopinath	
+Dinesh	
+Saibabu	
+Hasana	
+Divya	
+Aravindan	
+Sathish	
+Prasanth	
+Vijay	
+Sivakumar	
+
+
+
+11.Get length of FIRST_NAME from employee table
+SELECT LENGTH(`FIRST_NAME`) FROM `employee2`
+
+LENGTH(`FIRST_NAME`)
+
+9	
+6	
+8	
+6	
+7	
+6	
+5	
+9	
+7	
+8	
+5	
+9	
+
+12.Get First_Name from employee table after replacing 'a' with '$'
+SELECT REPLACE(`FIRST_NAME`,'a','$') FROM `employee2`
+
+REPLACE(`FIRST_NAME`,'a','$')
+
+Venk$desh	
+R$g$vi	
+Gopin$th	
+Dinesh	
+S$ib$bu	
+H$s$n$	
+Divy$	
+Ar$vind$n	
+S$thish	
+Pr$s$nth	
+Vij$y	
+Siv$kum$r	
+
+13.Get First_Name and Last_Name as single column from employee table separated by a '_'
+SELECT CONCAT(`FIRST_NAME`, ' ', `SECOND_NAME`) AS name FROM `employee2`
+
+name
+
+Venkadesh S	
+Ragavi P	
+Gopinath C	
+Dinesh G	
+Saibabu E	
+Hasana S	
+Divya P	
+Aravindan R	
+Sathish MD	
+Prasanth PKP	
+Vijay R	
+Sivakumar K	
+
+14.
+Get FIRST_NAME ,Joining year,Joining Month and Joining Date from employee table
+SELECT `FIRST_NAME`,`JOINING_DATE` FROM `employee2`
+
+ 	FIRST_NAME
+JOINING_DATE
+
+ 	  Edit
+  Copy
+  Delete
+Venkadesh	2015-08-27
+ 	  Edit
+  Copy
+  Delete
+Ragavi	2015-08-27
+ 	  Edit
+  Copy
+  Delete
+Gopinath	2016-02-03
+ 	  Edit
+  Copy
+  Delete
+Dinesh	2016-02-03
+ 	  Edit
+  Copy
+  Delete
+Saibabu	2017-08-07
+ 	  Edit
+  Copy
+  Delete
+Hasana	2017-08-07
+ 	  Edit
+  Copy
+  Delete
+Divya	2017-08-07
+ 	  Edit
+  Copy
+  Delete
+Aravindan	2018-08-07
+ 	  Edit
+  Copy
+  Delete
+Sathish	2016-02-03
+ 	  Edit
+  Copy
+  Delete
+Prasanth	2016-03-02
+ 	  Edit
+  Copy
+  Delete
+Vijay	2016-03-02
+ 	  Edit
+  Copy
+  Delete
+Sivakumar	2016-03-02
+
+
+
+
+Database SQL Queries Interview Questions and answers on "SQL Order By"
+
+15. Get all employee details from the employee table order by First_Name Ascending
+SELECT * FROM `employee2` ORDER BY `FIRST_NAME` ASC					
+ 	EMPLOYEE_ID
+FIRST_NAME   1
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+	
+
+
+16. Get all employee details from the employee table order by First_Name descending
+SELECT * FROM `employee2` ORDER BY `FIRST_NAME` DESC
+
+ 	EMPLOYEE_ID
+FIRST_NAME   1
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17. Get all employee details from the employee table order by First_Name Ascending and Salary descending
+SELECT * FROM `employee2` ORDER BY `FIRST_NAME`ASC,`SALARY`DESC
+
+ 	EMPLOYEE_ID
+FIRST_NAME   1
+SECOND_NAME
+SALARY   2
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+
+SQL Queries Interview Questions and Answers on "SQL Where Condition" – Examples
+
+18. Get employee details from employee table whose employee name is “Dinesh”
+SELECT * FROM `employee2`WHERE`FIRST_NAME`="Dinesh"
+
+ 	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+
+
+
+
+
+19. Get employee details from employee table whose employee name are “Dinesh” and “Roy”
+SELECT * FROM `employee2`WHERE`FIRST_NAME`="Dinesh" OR `FIRST_NAME`="Roy"
+
+ 	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+
+20. Get employee details from employee table whose employee name are not “Dinesh” and “Roy”
+SELECT * FROM `employee2`WHERE`FIRST_NAME`NOT IN ('Dinesh','Roy')
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+
+
+
+
+
+
+
+
+SQL Queries Interview Questions and Answers on "SQL Wild Card Search" – Examples
+
+21. Get employee details from employee table whose first name starts with 's'
+select * from `employee2` where `FIRST_NAME` LIKE 'S%' order by`FIRST_NAME`
+
+ 	EMPLOYEE_ID
+FIRST_NAME   1
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+22. Get employee details from employee table whose first name contains 'v'
+select * from `employee2` where `FIRST_NAME` LIKE '%V%'
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+23. Get employee details from employee table whose first name ends with 'n'
+select * from `employee2` where `FIRST_NAME` LIKE '%N'
+
+ 	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+
+SQL Queries Interview Questions and Answers on "SQL Pattern Matching" – Examples
+
+
+
+
+
+
+24. Get employee details from employee table whose first name ends with 'n' and name contains 4 letters
+SELECT * FROM `employee2` WHERE length(`FIRST_NAME`) = 4 and `FIRST_NAME` like '%n'
+
+	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+
+
+
+
+
+25. Get employee details from employee table whose first name starts with 'J' and name contains 4 letters
+SELECT * FROM `employee2` WHERE length(`FIRST_NAME`) = 4 and `FIRST_NAME` like 'j%'
+
+	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+
+
+
+
+26. Get employee details from employee table who’s Salary greater than 60000
+SELECT * FROM `employee2` WHERE `SALARY` > 60000
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27. Get employee details from employee table who’s Salary less than 80000
+SELECT * FROM `employee2` WHERE `SALARY` < 80000
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+28. Get employee details from employee table who’s Salary between 50000 and 80000
+SELECT * FROM `employee2` WHERE `SALARY`BETWEEN 50000 AND 80000
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+
+
+29. Get employee details from employee table whose name is venkatesh and ragavi
+SELECT * FROM `employee2`WHERE`FIRST_NAME` IN ('Venkadesh','Ragavi')
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+
+SQL Queries Interview Questions and Answers on "SQL DATE Functions" – Examples
+
+30. Get employee details from employee table whose joining year is “2015”
+Select * from `employee2` where year(`JOINING_DATE`)='2015'
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+
+
+
+
+31. Get employee details from employee table whose joining month is “January”
+Select * from `employee2` where month(`JOINING_DATE`)='1'
+
+	EMPLOYEE_ID	FIRST_NAME	SECOND_NAME	SALARY	JOINING_DATE	DEPARTMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+32. Get employee details from employee table who joined before January 1st 2017
+Select * from `employee2` WHERE`JOINING_DATE`<'2017-01-01'
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkadesh	S	100000	2015-08-27	BANKING
+ 	  Edit
+  Copy
+  Delete
+2	Ragavi	P	75000	2015-08-27	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+
+33. Get employee details from employee table who joined after January 31st 2016
+Select * from `employee2` WHERE`JOINING_DATE`>'2016-01-31'
+
+ 	EMPLOYEE_ID
+FIRST_NAME
+SECOND_NAME
+SALARY
+JOINING_DATE
+DEPARTMENT
+
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2016-02-03	PHARMA
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2016-02-03	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2017-08-07	SOFTWARE
+ 	  Edit
+  Copy
+  Delete
+6	Hasana	S	29000	2017-08-07	MANUFACTURING
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2017-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+8	Aravindan	R	40000	2018-08-07	HELTHCARE
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	45000	2016-02-03	AUTOMOBILE
+ 	  Edit
+  Copy
+  Delete
+10	Prasanth	PKP	34000	2016-03-02	INSURANCE
+ 	  Edit
+  Copy
+  Delete
+11	Vijay	R	25684	2016-03-02	BUSINESS
+ 	  Edit
+  Copy
+  Delete
+12	Sivakumar	K	54789	2016-03-02	SOFTWARE
+
+35. Get Joining Date and Time from employee table
+
+36. Get Joining Date,Time including milliseconds from employee table
+37. Get difference between JOINING_DATE and INCENTIVE_DATE from employee and incentives
+table
+38. Get database date
+SELECT now()
+
+now()	
+2019-11-30 15:08:38	
+
+SQL Queries Interview Questions and Answers on "SQL Escape Characters" – Examples
+
+39. Get names of employees from employee table who has '%' in Last_Name. Tip : Escape character for special characters in a query
+SELECT `FIRST_NAME`from `employee2`WHERE`SECOND_NAME`LIKE'%\%%'
+
+	FIRST_NAME
+
+.
+40. Get Last Name from employee table after replacing special character with white space
+SELECT REPLACE(`SECOND_NAME`,'&',' ')FROM`employee2`
+
+REPLACE(`SECOND_NAME`,'&',' ')
+
+S	
+P	
+C	
+G	
+E	
+S	
+P	
+R	
+MD	
+PKP	
+R	
+K	
+
+SQL Queries Interview Questions and Answers on "SQL Group By Functions" – Examples
+
+41. Get department,total salary with respect to a department from employee table.
+SELECT `DEPARTMENT`,SUM(`SALARY`)FROM `employee2`GROUP BY `DEPARTMENT`
+
+ 	DEPARTMENT
+SUM(`SALARY`)
+
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE	45000
+ 	  Edit
+  Copy
+  Delete
+BANKING	100000
+ 	  Edit
+  Copy
+  Delete
+BUSINESS	100684
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE	73000
+ 	  Edit
+  Copy
+  Delete
+INSURANCE	84000
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING	29000
+ 	  Edit
+  Copy
+  Delete
+PHARMA	50000
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE	94789
+
+42. Get department,total salary with respect to a department from employee table order 
+by total salary descending
+SELECT `DEPARTMENT`,SUM(SALARY)Total_salary FROM `employee2`GROUP BY `DEPARTMENT`order by Total_salary DESC
+
+ 	DEPARTMENT
+Total_salary   1
+
+ 	  Edit
+  Copy
+  Delete
+BUSINESS	100684
+ 	  Edit
+  Copy
+  Delete
+BANKING	100000
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE	94789
+ 	  Edit
+  Copy
+  Delete
+INSURANCE	84000
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE	73000
+ 	  Edit
+  Copy
+  Delete
+PHARMA	50000
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE	45000
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING	29000
+
+SQL Queries Interview   Questions   and   Answers on   "SQL   Mathematical   Operations   using Group   By"-Examples
+
+43. Get department,no of employees in a department,total salary with respect to a department
+SELECT `DEPARTMENT`,COUNT(`FIRST_NAME`),sum(SALARY)Total_salary FROM `employee2`GROUP BY `DEPARTMENT`order by Total_salary DESC
+
+DEPARTMENT
+COUNT(`FIRST_NAME`)
+Total_salary   1
+
+BUSINESS	2	100684	
+BANKING	1	100000	
+SOFTWARE	2	94789	
+INSURANCE	2	84000	
+HELTHCARE	2	73000	
+PHARMA	1	50000	
+AUTOMOBILE	1	45000	
+MANUFACTURING	1	29000	
+
+from employee table order by total salary
+descending
+44. Get department wise average salary from employee table order by salary
+Ascending
+SELECT `DEPARTMENT`,AVG(`FIRST_NAME`)Avgsalary FROM `employee2`GROUP BY `DEPARTMENT`order by Avgsalary ASC
+
+ 	DEPARTMENT
+Avgsalary   1
+
+ 	  Edit
+  Copy
+  Delete
+BUSINESS	0
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE	0
+ 	  Edit
+  Copy
+  Delete
+PHARMA	0
+ 	  Edit
+  Copy
+  Delete
+INSURANCE	0
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE	0
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING	0
+ 	  Edit
+  Copy
+  Delete
+BANKING	0
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE	0
+
+45. Get department wise maximum salary from employee table order by salary
+Ascending
+SELECT `DEPARTMENT`,MAX(`SALARY`)MaxSalary FROM`employee2`GROUP BY`DEPARTMENT`order by MaxSalary ASC
+
+ 	DEPARTMENT
+MaxSalary   1
+
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING	29000
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE	40000
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE	45000
+ 	  Edit
+  Copy
+  Delete
+PHARMA	50000
+ 	  Edit
+  Copy
+  Delete
+INSURANCE	50000
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE	54789
+ 	  Edit
+  Copy
+  Delete
+BUSINESS	75000
+ 	  Edit
+  Copy
+  Delete
+BANKING	100000
+
+46. Get department wise minimum salary from employee table order by salary ascending
+SELECT `DEPARTMENT`, min(`SALARY`) MinSalary FROM `employee2` GROUP BY `DEPARTMENT`order by MinSalary ASC
+
+ 	DEPARTMENT
+MinSalary   1
+
+ 	  Edit
+  Copy
+  Delete
+BUSINESS	25684
+ 	  Edit
+  Copy
+  Delete
+MANUFACTURING	29000
+ 	  Edit
+  Copy
+  Delete
+HELTHCARE	33000
+ 	  Edit
+  Copy
+  Delete
+INSURANCE	34000
+ 	  Edit
+  Copy
+  Delete
+SOFTWARE	40000
+ 	  Edit
+  Copy
+  Delete
+AUTOMOBILE	45000
+ 	  Edit
+  Copy
+  Delete
+PHARMA	50000
+ 	  Edit
+  Copy
+  Delete
+BANKING	100000
+
+47. Select no of employees joined with respect to year and month from employee table
+SELECT year (`JOINING_DATE`) Join_Year,month (`JOINING_DATE`) Join_Month,count(*) Total_Epm FROM `employee2` group by year(`JOINING_DATE`),month(`JOINING_DATE`)
+
+Join_Year
+Join_Month
+Total_Epm
+
+2015	8	2	
+2016	2	3	
+2016	3	3	
+2017	8	3	
+2018	8	1	
+
+
